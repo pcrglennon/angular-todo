@@ -1,22 +1,16 @@
 <!doctype html>
-<html ng-app="todo-list">
+<html ng-app="app">
 <head>
   <title>Angular Todo</title>
-  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular.min.js"></script>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.3/angular.min.js"></script>
 </head>
 
 <body>
-  <script type="text/javascript" src="app.js"></script>
-
-  <div class="container">
-    <div id="todo-list" ng-controller="ListController as list">
-      <h3> {{list.title}} </h3>
-      <div class="item" ng-repeat="item in list.items">
-        <h4>{{item.title}}</h4>
-        <h5>Priority: {{item.priority}}</h5>
-      </div>
-    </div>
+  <div ng-controller="TodoCtrl">
+    <h3> {{title}} </h3>
+    <todo-item ng-repeat="item in items"></todo-item>
   </div>
 
+  <script type="text/javascript" src="app.js"></script>
 </body>
 </html>
