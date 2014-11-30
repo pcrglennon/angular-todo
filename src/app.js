@@ -13,6 +13,10 @@ var app = angular.module('app', [])
   $scope.addTask = function() {
     $scope.tasks.push({title: $scope.newTask.title, priority: $scope.newTask.priority});
   };
+
+  $scope.deleteTask = function(index) {
+    $scope.tasks.splice(index, 1);
+  };
 })
 
 ;

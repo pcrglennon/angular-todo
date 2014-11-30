@@ -11,7 +11,7 @@
     <div class="todo-task" ng-repeat="task in tasks">
       <h4>{{task.title}}</h4>
       <h5>Priority: {{task.priority}}</h5>
-      <button>Done</button>
+      <button ng-click="deleteTask($index)">&times;</button>
     </div>
     <br><br>
     <div class="new-task">
